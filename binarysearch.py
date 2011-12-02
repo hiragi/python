@@ -11,20 +11,20 @@ def binarysearch(array, x, left, right):
 		if array[left] == x:
 			return left
 
-	return -1
+	return None
 
 def main():
-	array = [0] * 8
-	array[0] = random.randint(0, 20)
-	print("[0]:%d" % array[0])
-	for i in range (1, len(array)):
-		array[i] = array[i-1] + random.randint(0, 20)
-		print("[%d]:%d" %(i, array[i]))
+	array = []
+	for i in range(0, 10):
+		array.append(random.randint(0, 22))
+	
+	array.sort()
+	print(array)
 	
 	x = input("What is your search number?")
 	r = binarysearch(array, x, 0, len(array))
 
-	if r == -1:
+	if r == None:
 		print("Your search number is not found")
 	else:
 		print("Your search number is here %d" %r)
