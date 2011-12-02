@@ -1,3 +1,7 @@
+#coding: utf-8
+
+import random
+
 def bubblesort(array):
 	while True:
 		flag = False
@@ -7,12 +11,25 @@ def bubblesort(array):
 				temp = array[i]
 				array[i] = array[i+1]
 				array[i+1] = temp
-		if flag == False:
+		if not flag:
 			break
 
 	return array
 
-test = [2, 4, 7, 1, 3, 9, 8, 6, 5]
-bubblesort(test)
+def main():
+	array = []
+	for i in range(0, 10):
+		array.append(random.randint(0, 20))
+	
+	print(array)
 
-print test
+	bubblesort(array)
+
+	print("\nバブルソート後\n")
+
+	print(array)
+
+	return 0
+
+if __name__ == "__main__":
+	main()
