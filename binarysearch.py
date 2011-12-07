@@ -14,10 +14,7 @@ def binarysearch(array, x, left, right):
 	return None
 
 def main():
-	array = []
-	for i in range(0, 10):
-		array.append(random.randint(0, 22))
-	
+	array = [random.randint(0, 20) for i in range(0, 10)]
 	array.sort()
 	print(array)
 	
